@@ -1,0 +1,9 @@
+public class Turno{
+
+    public void pasarTurno()
+    {
+
+    }
+
+
+}
