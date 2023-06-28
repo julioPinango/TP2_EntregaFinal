@@ -32,6 +32,10 @@ public class ControladorSonido {
     }
 
     public void silenciar(MediaPlayer mediaPlayer){
-        mediaPlayer.volumeProperty().bindBidirectional(new SimpleDoubleProperty(0));
+
+        if(mediaPlayer.volumeProperty().get()==0)
+            mediaPlayer.volumeProperty().bindBidirectional(new SimpleDoubleProperty(0.1));
+        else
+            mediaPlayer.volumeProperty().bindBidirectional(new SimpleDoubleProperty(0));
     }
 }
