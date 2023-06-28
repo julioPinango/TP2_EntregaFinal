@@ -1,4 +1,4 @@
-![tp2](https://github.com/julioPinango/TP2_EntregaFinal/actions/workflows/build.yml/badge.svg) [![codecov](https://codecov.io/gh/julioPinango/TP2_TowerDefense/branch/master/graph/badge.svg)](https://codecov.io/gh/julioPinango/TP2_TowerDefense)
+![tp2](https://github.com/julioPinango/TP2_EntregaFinal/actions/workflows/build.yml/badge.svg) [![codecov](https://codecov.io/gh/julioPinango/TP2_EntregaFinal/branch/master/graph/badge.svg)](https://codecov.io/gh/julioPinango/TP2_EntregaFinal)
 
 # TP2 Algoritmos 3: {nombre} 
 
