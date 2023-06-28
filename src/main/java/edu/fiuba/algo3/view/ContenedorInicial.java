@@ -1,5 +1,15 @@
 package edu.fiuba.algo3.view;
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.Objects;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
+
 import edu.fiuba.algo3.view.eventos.BotonIniciarEventHandler;
 import edu.fiuba.algo3.view.eventos.ControladorSonido;
 import edu.fiuba.algo3.view.eventos.TextoEventHandler;
@@ -10,9 +20,17 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
+import javafx.scene.shape.Box;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
+
+import javafx.beans.property.SimpleDoubleProperty;
+import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.util.Duration;
 
 
 
