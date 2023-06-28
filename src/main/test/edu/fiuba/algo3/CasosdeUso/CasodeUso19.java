@@ -13,7 +13,7 @@ public class CasodeUso19 {
     @Test
     public void Prueba01(){
         
-        String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/Enemigos.json";
+        String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/JSONdeEnemigosDefinitivo.json";
         String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapa.json";
         Parser parser = new Parser();
         Mapa mapa=new Mapa(path,path2,parser);
@@ -23,7 +23,7 @@ public class CasodeUso19 {
 
         Juego juego=new Juego(jugador,mapa,turno);
 
-        for (int i = 0; i < 25; i++) {
+        for (int i = 0; i < 26; i++) {
             juego.realizarTurno();
         }
 
