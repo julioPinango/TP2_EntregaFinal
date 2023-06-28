@@ -133,6 +133,7 @@
                 <configuration>
                     <includes>
                         <include>edu/fiuba/algo3/CasosdeUso/*.java</include>
+                        <include>edu/fiuba/algo3/PruebasUnitarias/Pruebas/*.java</include>
                     </includes>
                     <argLine>${argLine} -XX:MaxPermSize=256m</argLine>
                 </configuration>
