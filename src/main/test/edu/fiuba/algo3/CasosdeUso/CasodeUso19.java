@@ -27,7 +27,7 @@ public class CasodeUso19 {
             juego.realizarTurno();
         }
 
-        //Como probamos lo aleatorio.
+        
         assertEquals("Pierde",juego.getResultado());        
     }
 }

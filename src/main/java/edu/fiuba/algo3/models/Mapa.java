@@ -86,10 +86,14 @@ public class Mapa
 
         Cordenada cordenada=new Cordenada(x, y); 
         Defensa defensaNueva= DefensaFactory.obtenerDefensa(cordenada,tipo);
-        var preuba=parcelas.get(cordenada);
-        if(preuba.puedoConstruirDefensa(defensaNueva)
-        &&posicionValida(cordenada)
-        &&jugador.creditosSuficientes(defensaNueva.getCosto()))
+        var cordenadaParcela=parcelas.get(cordenada);
+
+        if(cordenadaParcela ==null)
+            return false;
+
+
+        if(cordenadaParcela.puedoConstruirDefensa(defensaNueva)&&
+        posicionValida(cordenada)&&jugador.creditosSuficientes(defensaNueva.getCosto()))
         {
 
             jugador.descontarCredito(defensaNueva.getCosto());
@@ -100,6 +104,7 @@ public class Mapa
             log.imprimirConstruccion(defensaNueva,cordenada);
             return true;
         }
+        
         return false;
 
     }
@@ -109,16 +114,9 @@ public class Mapa
         List<Pasarela> listaPasarelas = new ArrayList<>(caminoEnemigos);
         int tamaño = listaPasarelas.size();
         
-        if(cordenada==listaPasarelas.get(0).getCordenada())
-        {
+        if(cordenada==listaPasarelas.get(0).getCordenada()&&cordenada == listaPasarelas.get(tamaño - 1).getCordenada())
             return false;
-        }
-
-        if(cordenada == listaPasarelas.get(tamaño - 1).getCordenada())
-        {   
-            return false;
-        }
-
+       
         return true;
         
     }

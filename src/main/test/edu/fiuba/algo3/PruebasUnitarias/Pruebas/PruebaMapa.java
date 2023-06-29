@@ -29,7 +29,7 @@ public class PruebaMapa {
         Mapa mapa=new Mapa(path,path2,parser);
         Jugador jugador=mock(Jugador.class);
         when(jugador.creditosSuficientes(anyInt())).thenReturn(true);
-        
+
         assertTrue(mapa.colocarDefensaEnEstaPosicion(0, 1, "Torre Plateada",jugador));
     }
 
@@ -49,4 +49,120 @@ public class PruebaMapa {
 
     }
 
+    @Test
+    public void TestColocarDefensaEnEstaPosicionFueraDelMapa()
+    {
+            
+        String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigosAraña.json";
+        String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapa.json";
+        Parser parser = new Parser();
+        Mapa mapa=new Mapa(path,path2,parser);
+        Jugador jugador=mock(Jugador.class);
+
+
+        when(jugador.creditosSuficientes(anyInt())).thenReturn(true);
+        mapa.colocarDefensaEnEstaPosicion(0, 1, "Torre Plateada",jugador);
+
+        assertFalse(mapa.colocarDefensaEnEstaPosicion(-1, 1, "Torre Plateada",jugador));
+
+    }
+
+    @Test
+    public void TestTamañoParcelasCorrecto()
+    {
+            
+        String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigosAraña.json";
+        String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapa.json";
+        Parser parser = new Parser();
+        Mapa mapa=new Mapa(path,path2,parser);
+        Jugador jugador=mock(Jugador.class);
+
+
+
+        assertTrue(mapa.getTamañoParcelas()==15);
+
+    }
+
+    @Test
+    public void TestHayDefensaEnestaPosicion()
+    {
+            
+        String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigosAraña.json";
+        String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapa.json";
+        Parser parser = new Parser();
+        Mapa mapa=new Mapa(path,path2,parser);
+        Jugador jugador=mock(Jugador.class);
+
+
+        when(jugador.creditosSuficientes(anyInt())).thenReturn(true);
+        mapa.colocarDefensaEnEstaPosicion(0, 1, "Torre Plateada",jugador);
+
+        
+
+        assertTrue(mapa.hayDefensaEnEstaPosicion(0, 1));
+
+    }
+    @Test
+    public void TestNoHayDefensaEnestaPosicion()
+    {
+            
+        String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigosAraña.json";
+        String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapa.json";
+        Parser parser = new Parser();
+        Mapa mapa=new Mapa(path,path2,parser);
+        Jugador jugador=mock(Jugador.class);        
+
+        assertFalse(mapa.hayDefensaEnEstaPosicion(0, 1));
+
+    }
+
+    @Test
+    public void TestObtenerTipoDefensa()
+    {
+            
+        String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigosAraña.json";
+        String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapa.json";
+        Parser parser = new Parser();
+        Mapa mapa=new Mapa(path,path2,parser);
+        Jugador jugador=mock(Jugador.class);        
+
+        when(jugador.creditosSuficientes(anyInt())).thenReturn(true);
+
+        mapa.colocarDefensaEnEstaPosicion(0, 1, "Torre Plateada",jugador);
+
+        assertEquals(mapa.obtenerTipoDefensa(0, 1),"Torre Plateada");
+
+    }
+
+    @Test
+    public void TestObtenerTipoParcela()
+    {
+            
+        String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigosAraña.json";
+        String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapa.json";
+        Parser parser = new Parser();
+        Mapa mapa=new Mapa(path,path2,parser);
+        Jugador jugador=mock(Jugador.class);        
+
+        assertEquals(mapa.obtenerTipoParcela(0, 1),"Tierra");
+
+    }
+
+    @Test
+    public void TestDefensaEnConstruccion()
+    {
+            
+        String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigosAraña.json";
+        String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapa.json";
+        Parser parser = new Parser();
+        Mapa mapa=new Mapa(path,path2,parser);
+        Jugador jugador=mock(Jugador.class);        
+
+        when(jugador.creditosSuficientes(anyInt())).thenReturn(true);
+
+        mapa.colocarDefensaEnEstaPosicion(0, 1, "Torre Plateada",jugador);
+
+        assertTrue(mapa.defensaEnConstruccion(0, 1)==true);
+
+    }
 }

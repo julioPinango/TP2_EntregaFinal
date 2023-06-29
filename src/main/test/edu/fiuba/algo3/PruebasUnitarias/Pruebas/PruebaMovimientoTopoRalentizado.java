@@ -34,7 +34,7 @@ public class PruebaMovimientoTopoRalentizado {
         pasarelas.add(pasarela);
         
 
-        MovimientoTopo movimiento = new MovimientoTopo();
+        MovimientoTopoRalentizado movimiento = new MovimientoTopoRalentizado();
         
         assertEquals(pasarelasEsperadas, movimiento.mover(pasarelas,6));
     }
