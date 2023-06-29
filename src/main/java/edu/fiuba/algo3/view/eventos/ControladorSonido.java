@@ -52,4 +52,11 @@ public class ControladorSonido {
         else
             mediaPlayer.volumeProperty().bindBidirectional(new SimpleDoubleProperty(0));
     }
+
+    public void setMusicaError() {
+        Media media = new Media(getClass().getResource("/sonidos/Error.mp3").toExternalForm());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.volumeProperty().bindBidirectional(new SimpleDoubleProperty(0.1));
+        mediaPlayer.setAutoPlay(true);           
+    }
 }

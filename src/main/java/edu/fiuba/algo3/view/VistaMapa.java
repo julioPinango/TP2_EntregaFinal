@@ -13,6 +13,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 
 public class VistaMapa extends GridPane{
     private Juego juego;
@@ -20,10 +21,12 @@ public class VistaMapa extends GridPane{
     private String tipoDefensa;
     private VistaJugador vistaJugador;
     private Map<String, Image> imagenes = new HashMap<>();
+    private Stage _Stage;
 
-    public VistaMapa(Juego j) {
+    public VistaMapa(Juego j,Stage s) {
         this.juego = j;
         this.parcelasHabilitadas=false;
+        this._Stage=s;
         imagenes=setearImagenes();
     }
 
@@ -89,7 +92,7 @@ public class VistaMapa extends GridPane{
         for (int fila = 0; fila < tamañoMapa; fila++) {
             for (int columna = 0; columna < tamañoMapa; columna++) {
 
-                CrearDefensaEventHandler crearDefensa= new CrearDefensaEventHandler(this, juego, fila, columna, tipoDefensa);
+                CrearDefensaEventHandler crearDefensa= new CrearDefensaEventHandler(this, juego, fila, columna, tipoDefensa,_Stage);
             
                 ImageView parcela=dibujarParcela(fila,columna);                 
 

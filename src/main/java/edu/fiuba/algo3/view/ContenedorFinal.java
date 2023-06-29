@@ -54,12 +54,12 @@ public class ContenedorFinal extends VBox{
         if (juego.getResultado()=="Gana")
         {
             resultadoJuego.setText("Felicidades! Ganaste el juego");
-            _musica=controlador.setMusicGanar();
+            controlador.setMusicGanar();
         }
         else
         {
             resultadoJuego.setText("Perdiste el juego, será para la próxima!");
-            _musica=controlador.setMusicPerder();
+            controlador.setMusicPerder();
         }
         this.getChildren().addAll(
             resultadoJuego

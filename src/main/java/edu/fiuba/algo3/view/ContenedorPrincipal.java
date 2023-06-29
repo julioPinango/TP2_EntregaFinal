@@ -44,7 +44,7 @@ public class ContenedorPrincipal extends BorderPane{
     }
 
     private VistaMapa setMapa(){
-        VistaMapa vista= new VistaMapa(juego);
+        VistaMapa vista= new VistaMapa(juego,stage);
         this.contenedor= new HBox();
         contenedor.getChildren().addAll(vista.mostrarMapa());
         vista.setAlignment(Pos.CENTER);
