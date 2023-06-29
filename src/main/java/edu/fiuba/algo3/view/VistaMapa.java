@@ -126,10 +126,13 @@ public class VistaMapa extends GridPane{
                 gridPane.add(enemigo, i, 0);
             }else if (i<6){
                 gridPane.add(enemigo, i-3, 1);
-            }else{
+            }
+            else if (i<9){
                 gridPane.add(enemigo, i-6,2);
             }
         }
+            
+
         stackPane.getChildren().add(gridPane);
 
         return stackPane;

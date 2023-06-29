@@ -2,6 +2,7 @@ package edu.fiuba.algo3.view;
 
 import edu.fiuba.algo3.models.Juego;
 import edu.fiuba.algo3.view.eventos.BotonReiniciarEventHandler;
+import edu.fiuba.algo3.view.eventos.ControladorSonido;
 import edu.fiuba.algo3.view.eventos.SalirDelJuegoEventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -15,6 +16,7 @@ import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
@@ -22,6 +24,8 @@ public class ContenedorFinal extends VBox{
 
     private Juego juego;
     private Stage stage;
+    private MediaPlayer _musica;
+ 
 
     public ContenedorFinal(Stage s, Juego j) {
         this.juego=j;
@@ -44,14 +48,24 @@ public class ContenedorFinal extends VBox{
         resultadoJuego.setFont(new Font("Trebuchet MS", 25));
         resultadoJuego.setStyle("-fx-font-weight: bold;-fx-background-color: white;");
 
-        if (juego.getResultado()=="Gana")
-            resultadoJuego.setText("Felicidades! Ganaste el juego");
-        else
-            resultadoJuego.setText("Perdiste el juego, será para la próxima!");
 
+        ControladorSonido controlador =new ControladorSonido();
+
+        if (juego.getResultado()=="Gana")
+        {
+            resultadoJuego.setText("Felicidades! Ganaste el juego");
+            _musica=controlador.setMusicGanar();
+        }
+        else
+        {
+            resultadoJuego.setText("Perdiste el juego, será para la próxima!");
+            _musica=controlador.setMusicPerder();
+        }
         this.getChildren().addAll(
-                resultadoJuego
+            resultadoJuego
         );
+
+        
     }
     private void setBotones(){
 
@@ -70,10 +84,12 @@ public class ContenedorFinal extends VBox{
         BotonReiniciarEventHandler reiniciarEventHandler = new BotonReiniciarEventHandler(stage,juego);
         buttonReiniciar.setOnAction(reiniciarEventHandler);
 
+
         contenedor.getChildren().addAll(
                 buttonCerrarJuego,
                 buttonReiniciar
         );
         this.getChildren().addAll(contenedor);
     }
+
 }

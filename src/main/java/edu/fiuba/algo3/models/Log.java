@@ -39,4 +39,8 @@ public class Log{
         System.out.println("Lechuza destruye una " + defensa.getNombre() + " en la posición " + 
         defensa.obtenerCordenada().getCoordenadas());
     }
+    public void imprimirRalentizacion(Enemigo enemigo){
+        System.out.println("Trampa arenosa ralentiza a "+enemigo.getNombre()+" en la posición " + 
+        enemigo.getCordenada().getCoordenadas());
+    }
 }

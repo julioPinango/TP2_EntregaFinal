@@ -30,6 +30,20 @@ public class ControladorSonido {
         });
         return mediaPlayer;
     }
+    public MediaPlayer setMusicGanar(){
+        Media media = new Media(getClass().getResource("/sonidos/SonidoGanar.mp3").toExternalForm());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.volumeProperty().bindBidirectional(new SimpleDoubleProperty(0.1));
+        mediaPlayer.setAutoPlay(true);        
+        return mediaPlayer;
+    }
+    public MediaPlayer setMusicPerder(){
+        Media media = new Media(getClass().getResource("/sonidos/SonidoPerder.mp3").toExternalForm());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.volumeProperty().bindBidirectional(new SimpleDoubleProperty(0.1));
+        mediaPlayer.setAutoPlay(true);        
+        return mediaPlayer;
+    }
 
     public void silenciar(MediaPlayer mediaPlayer){
 

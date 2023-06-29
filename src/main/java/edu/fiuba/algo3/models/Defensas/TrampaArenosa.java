@@ -25,7 +25,9 @@ public class TrampaArenosa extends Defensa{
 
         for (Enemigo enemigo : enemigos) {
             if(cordenada.estaEnRango(RangoAtaque, enemigo.getCordenada())){
-                 enemigo.ralentizar(); 
+                enemigo.ralentizar();
+                var log = Log.obtenetInstancia();
+                log.imprimirRalentizacion(enemigo);
             }           
         }
 

@@ -30,9 +30,9 @@ public class VistaOpciones extends MenuBar{
     private Menu setOpciones(){
 
         Menu subMenuButton = new Menu("Opciones");
-        MenuItem silenciarMusicaItem = new MenuItem("Silenciar música");
-        MenuItem silenciarEfectosItem = new MenuItem("Silenciar efectos");
-        MenuItem pantallaCompletaItem = new MenuItem("Pantalla completa");
+        MenuItem silenciarMusicaItem = new MenuItem("Silenciar/Activar música");
+        //MenuItem silenciarEfectosItem = new MenuItem("Silenciar efectos");
+        MenuItem pantallaCompletaItem = new MenuItem("Activar/Desactivar Pantalla completa");
         MenuItem SalirItem = new MenuItem("Salir del Juego");
         MenuItem reiniciarJuego = new MenuItem("Reiniciar Juego");
 
@@ -48,7 +48,7 @@ public class VistaOpciones extends MenuBar{
         OpcionesSilenciarMusicaEventHandler silenciarMusica= new OpcionesSilenciarMusicaEventHandler(mediaPlayer);
         silenciarMusicaItem.setOnAction(silenciarMusica);
 
-        subMenuButton.getItems().addAll(silenciarMusicaItem, silenciarEfectosItem, pantallaCompletaItem,SalirItem,reiniciarJuego);
+        subMenuButton.getItems().addAll(silenciarMusicaItem, pantallaCompletaItem,SalirItem,reiniciarJuego);
 
         return subMenuButton;
     }
