@@ -29,7 +29,7 @@ public class ContenedorPrincipal extends BorderPane{
         this.juego=j;
         this.setMusica();
 
-        Image imagen = new Image("file:src/main/img/difuminado.png");
+        Image imagen = new Image("file:src/main/resources/img/difuminado.png");
         BackgroundImage imagenFondo = new BackgroundImage(imagen, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, true));
         this.setBackground(new Background(imagenFondo));
 

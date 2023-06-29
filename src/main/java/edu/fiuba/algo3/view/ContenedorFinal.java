@@ -35,7 +35,7 @@ public class ContenedorFinal extends VBox{
         this.setSpacing(20);
         this.setPadding(new Insets(25));
 
-        Image imagen = new Image("file:src/main/img/final.jpg");
+        Image imagen = new Image("file:src/main/resources/img/final.jpg");
         BackgroundImage imagenFondo = new BackgroundImage(imagen, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, true));
         this.setBackground(new Background(imagenFondo));
 

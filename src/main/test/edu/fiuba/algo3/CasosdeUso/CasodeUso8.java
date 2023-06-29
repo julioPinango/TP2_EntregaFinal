@@ -16,8 +16,8 @@ public class CasodeUso8 {
     @Test
     public void Prueba01(){
         
-        String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigosHormiga.json";
-        String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapaReducido.json";
+        String path="src/main/resources/ArchivosJson/enemigosHormiga.json";
+        String path2="src/main/resources/ArchivosJson/mapaReducido.json";
         Parser parser = new Parser();
         Mapa mapa=new Mapa(path,path2,parser);
     
@@ -41,8 +41,8 @@ public class CasodeUso8 {
     }
     @Test
     public void Prueba02(){
-        String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigos12Hormigas.json";
-        String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapa.json";
+        String path="src/main/resources/ArchivosJson/enemigos12Hormigas.json";
+        String path2="src/main/resources/ArchivosJson/mapa.json";
         Parser parser = new Parser();
         Mapa mapa=new Mapa(path,path2,parser);
         Turno turno=new Turno();
@@ -71,8 +71,8 @@ public class CasodeUso8 {
     @Test
     public void Prueba03(){
         
-               String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigosAraña.json";
-        String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapa.json";
+               String path="src/main/resources/ArchivosJson/enemigosAraña.json";
+        String path2="src/main/resources/ArchivosJson/mapa.json";
         Parser parser = new Parser();
         Mapa mapa=new Mapa(path,path2,parser);
         Turno turno=new Turno();

@@ -16,7 +16,7 @@ public class App extends Application {
         ContenedorInicial contenedorInicial = new ContenedorInicial(stage);
         Scene scene = new Scene(contenedorInicial ,800,470);
 
-        Image imagen = new Image("file:src/main/img/Icono.png");
+        Image imagen = new Image("file:src/main/resources/img/Icono.png");
 
         stage.getIcons().add(imagen);
         //contenedorInicial.

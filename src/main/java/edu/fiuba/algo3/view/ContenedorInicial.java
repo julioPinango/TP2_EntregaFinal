@@ -31,7 +31,7 @@ public class ContenedorInicial extends VBox {
         this.setPadding(new Insets(100,25,25,25));
         this.setMusica();
 
-        Image imagen = new Image("file:src/main/img/inicio.png");
+        Image imagen = new Image("file:src/main/resources/img/inicio.png");
         BackgroundImage imagenFondo = new BackgroundImage(imagen, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, true));
         this.setBackground(new Background(imagenFondo));
 

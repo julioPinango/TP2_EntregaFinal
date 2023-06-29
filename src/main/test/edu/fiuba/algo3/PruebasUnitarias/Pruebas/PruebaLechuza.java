@@ -19,8 +19,8 @@ public class PruebaLechuza {
    
         //Pruebo que la lechuza se mueve en forma de L
 
-            String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapa.json"; 
-            String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigosLechuza.json";    
+            String path="src/main/resources/ArchivosJson/mapa.json"; 
+            String path2="src/main/resources/ArchivosJson/enemigosLechuza.json";    
             Parser parser=new Parser();       
 
             Mapa mapa=new Mapa(path2, path, parser);
@@ -41,8 +41,8 @@ public class PruebaLechuza {
    
         //Pruebo que la lechuza se mueve en forma de L
 
-            String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapa.json"; 
-            String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigosLechuza.json";    
+            String path="src/main/resources/ArchivosJson/mapa.json"; 
+            String path2="src/main/resources/ArchivosJson/enemigosLechuza.json";    
             Parser parser=new Parser();       
 
             Mapa mapa=new Mapa(path2, path, parser);
@@ -65,8 +65,8 @@ public class PruebaLechuza {
    
         //Pruebo que la lechuza elimina una torre   
 
-            String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapa.json"; 
-            String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigosLechuza.json";    
+            String path="src/main/resources/ArchivosJson/mapa.json"; 
+            String path2="src/main/resources/ArchivosJson/enemigosLechuza.json";    
             Parser parser=new Parser();       
 
             Mapa mapa=new Mapa(path2, path, parser);
@@ -97,8 +97,8 @@ public class PruebaLechuza {
    
         //Pruebo que la lechuza no hace daño   
 
-            String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapa.json"; 
-            String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigosLechuza.json";    
+            String path="src/main/resources/ArchivosJson/mapa.json"; 
+            String path2="src/main/resources/ArchivosJson/enemigosLechuza.json";    
             Parser parser=new Parser();       
 
             Mapa mapa=new Mapa(path2, path, parser);
@@ -127,8 +127,8 @@ public class PruebaLechuza {
    
             //Pruebo que la lechuza no da creditos. 
 
-            String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapa.json"; 
-            String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigosLechuza.json";    
+            String path="src/main/resources/ArchivosJson/mapa.json"; 
+            String path2="src/main/resources/ArchivosJson/enemigosLechuza.json";    
             Parser parser=new Parser();       
 
             Mapa mapa=new Mapa(path2, path, parser);

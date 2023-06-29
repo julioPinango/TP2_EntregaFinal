@@ -8,7 +8,7 @@ public class CasodeUso13 {
     @Test
     public void Prueba01()throws Exception{
       
-       String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigosRoto.json";
+       String path2="src/main/resources/ArchivosJson/enemigosRoto.json";
         Parser parser = new Parser();
 
        assertThrows(Exception.class, () -> {parser.desglosarEnemigos(path2);});

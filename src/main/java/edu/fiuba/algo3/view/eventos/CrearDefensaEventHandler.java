@@ -37,17 +37,17 @@ public class CrearDefensaEventHandler implements EventHandler<MouseEvent>{
             if(tipoDefensa=="Trampa Arenosa")
             {        
                 mensaje="Recuerde que las trampas arenosas solo se puede construir en las pasarelas";
-                path="file:src/main/img/Arenoso.png";
+                path="file:src/main/resources/img/Arenoso.png";
             }               
             else if(tipoDefensa=="Torre Plateada")
             {
                 mensaje="Recuerde que las torres plateadas solo se puede construir en las parcelas de tierra y si no hay otra torre en ese lugar";
-                path="file:src/main/img/TorrePlateada.png";
+                path="file:src/main/resources/img/TorrePlateada.png";
             }
             else if(tipoDefensa=="Torre Blanca")
             {
                 mensaje="Recuerde que las torres blancas solo se puede construir en las parcelas de tierra y si no hay otra torre en ese lugar";
-                path="file:src/main/img/TorreBlanca.png";                
+                path="file:src/main/resources/img/TorreBlanca.png";                
             }           
             
             VistaExcepcion.Alerta(mensaje,path);

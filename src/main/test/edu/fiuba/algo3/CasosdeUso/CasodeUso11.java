@@ -13,8 +13,8 @@ public class CasodeUso11 {
     @Test
     public void Prueba01(){
         
-        String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigosAraña.json";
-        String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapa.json";
+        String path="src/main/resources/ArchivosJson/enemigosAraña.json";
+        String path2="src/main/resources/ArchivosJson/mapa.json";
         Parser parser = new Parser();
         Mapa mapa=new Mapa(path,path2,parser);
         Turno turno=new Turno();

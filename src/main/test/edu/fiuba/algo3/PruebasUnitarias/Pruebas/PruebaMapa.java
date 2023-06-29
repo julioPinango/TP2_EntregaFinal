@@ -23,8 +23,8 @@ public class PruebaMapa {
     public void TestColocarDefensaEnEstaPosicionCasoPositivo()
     {
             
-        String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigosAraña.json";
-        String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapa.json";
+        String path="src/main/resources/ArchivosJson/enemigosAraña.json";
+        String path2="src/main/resources/ArchivosJson/mapa.json";
         Parser parser = new Parser();
         Mapa mapa=new Mapa(path,path2,parser);
         Jugador jugador=mock(Jugador.class);
@@ -37,8 +37,8 @@ public class PruebaMapa {
     public void TestColocarDefensaEnEstaPosicionCasoNegativo()
     {
             
-        String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigosAraña.json";
-        String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapa.json";
+        String path="src/main/resources/ArchivosJson/enemigosAraña.json";
+        String path2="src/main/resources/ArchivosJson/mapa.json";
         Parser parser = new Parser();
         Mapa mapa=new Mapa(path,path2,parser);
         Jugador jugador=mock(Jugador.class);
@@ -53,8 +53,8 @@ public class PruebaMapa {
     public void TestColocarDefensaEnEstaPosicionFueraDelMapa()
     {
             
-        String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigosAraña.json";
-        String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapa.json";
+        String path="src/main/resources/ArchivosJson/enemigosAraña.json";
+        String path2="src/main/resources/ArchivosJson/mapa.json";
         Parser parser = new Parser();
         Mapa mapa=new Mapa(path,path2,parser);
         Jugador jugador=mock(Jugador.class);
@@ -71,8 +71,8 @@ public class PruebaMapa {
     public void TestTamañoParcelasCorrecto()
     {
             
-        String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigosAraña.json";
-        String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapa.json";
+        String path="src/main/resources/ArchivosJson/enemigosAraña.json";
+        String path2="src/main/resources/ArchivosJson/mapa.json";
         Parser parser = new Parser();
         Mapa mapa=new Mapa(path,path2,parser);
         Jugador jugador=mock(Jugador.class);
@@ -87,8 +87,8 @@ public class PruebaMapa {
     public void TestHayDefensaEnestaPosicion()
     {
             
-        String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigosAraña.json";
-        String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapa.json";
+        String path="src/main/resources/ArchivosJson/enemigosAraña.json";
+        String path2="src/main/resources/ArchivosJson/mapa.json";
         Parser parser = new Parser();
         Mapa mapa=new Mapa(path,path2,parser);
         Jugador jugador=mock(Jugador.class);
@@ -106,8 +106,8 @@ public class PruebaMapa {
     public void TestNoHayDefensaEnestaPosicion()
     {
             
-        String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigosAraña.json";
-        String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapa.json";
+        String path="src/main/resources/ArchivosJson/enemigosAraña.json";
+        String path2="src/main/resources/ArchivosJson/mapa.json";
         Parser parser = new Parser();
         Mapa mapa=new Mapa(path,path2,parser);
         Jugador jugador=mock(Jugador.class);        
@@ -120,8 +120,8 @@ public class PruebaMapa {
     public void TestObtenerTipoDefensa()
     {
             
-        String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigosAraña.json";
-        String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapa.json";
+        String path="src/main/resources/ArchivosJson/enemigosAraña.json";
+        String path2="src/main/resources/ArchivosJson/mapa.json";
         Parser parser = new Parser();
         Mapa mapa=new Mapa(path,path2,parser);
         Jugador jugador=mock(Jugador.class);        
@@ -138,8 +138,8 @@ public class PruebaMapa {
     public void TestObtenerTipoParcela()
     {
             
-        String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigosAraña.json";
-        String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapa.json";
+        String path="src/main/resources/ArchivosJson/enemigosAraña.json";
+        String path2="src/main/resources/ArchivosJson/mapa.json";
         Parser parser = new Parser();
         Mapa mapa=new Mapa(path,path2,parser);
         Jugador jugador=mock(Jugador.class);        
@@ -152,8 +152,8 @@ public class PruebaMapa {
     public void TestDefensaEnConstruccion()
     {
             
-        String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigosAraña.json";
-        String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapa.json";
+        String path="src/main/resources/ArchivosJson/enemigosAraña.json";
+        String path2="src/main/resources/ArchivosJson/mapa.json";
         Parser parser = new Parser();
         Mapa mapa=new Mapa(path,path2,parser);
         Jugador jugador=mock(Jugador.class);        

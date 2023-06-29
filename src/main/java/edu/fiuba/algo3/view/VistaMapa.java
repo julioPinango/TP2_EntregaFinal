@@ -32,22 +32,22 @@ public class VistaMapa extends GridPane{
 
     private Map<String, Image> setearImagenes() {
         
-        Image imagenTierra = new Image("file:src/main/img/tierra.jpg");
-        Image imagenRocoso = new Image("file:src/main/img/rocoso.png");
-        Image imagenPasarela = new Image("file:src/main/img/pasarela.png");
+        Image imagenTierra = new Image("file:src/main/resources/img/tierra.jpg");
+        Image imagenRocoso = new Image("file:src/main/resources/img/rocoso.png");
+        Image imagenPasarela = new Image("file:src/main/resources/img/pasarela.png");
 
-        Image imgArenoso = new Image("file:src/main/img/arenoso.png");
-        Image imgTorreBlanca = new Image("file:src/main/img/TorreBlanca.png");
-        Image imgTorrePlateada = new Image("file:src/main/img/TorrePlateada.png");
+        Image imgArenoso = new Image("file:src/main/resources/img/arenoso.png");
+        Image imgTorreBlanca = new Image("file:src/main/resources/img/TorreBlanca.png");
+        Image imgTorrePlateada = new Image("file:src/main/resources/img/TorrePlateada.png");
         
-        Image imgArenosoEnConstruccion = new Image("file:src/main/img/arenosoEnConstruccion.png");
-        Image imgTorreBlancaEnConstruccion = new Image("file:src/main/img/TorreBlancaEnConstruccion.png");
-        Image imgTorrePlateadaEnConstruccion = new Image("file:src/main/img/TorrePlateadaEnConstruccion.png");
+        Image imgArenosoEnConstruccion = new Image("file:src/main/resources/img/arenosoEnConstruccion.png");
+        Image imgTorreBlancaEnConstruccion = new Image("file:src/main/resources/img/TorreBlancaEnConstruccion.png");
+        Image imgTorrePlateadaEnConstruccion = new Image("file:src/main/resources/img/TorrePlateadaEnConstruccion.png");
 
-        Image imagenHormiga = new Image("file:src/main/img/hormiga.png");
-        Image imagenAraña = new Image("file:src/main/img/arana.png");
-        Image imagenTopo = new Image("file:src/main/img/topo.png");
-        Image imagenLechuza = new Image("file:src/main/img/lechuza.png");
+        Image imagenHormiga = new Image("file:src/main/resources/img/hormiga.png");
+        Image imagenAraña = new Image("file:src/main/resources/img/arana.png");
+        Image imagenTopo = new Image("file:src/main/resources/img/topo.png");
+        Image imagenLechuza = new Image("file:src/main/resources/img/lechuza.png");
 
 
         Map<String, Image> imagenes = new HashMap<>();
@@ -87,7 +87,7 @@ public class VistaMapa extends GridPane{
 
         int tamañoMapa = juego.getTamañoParcelas();
         
-        Image marco=new Image("file:src/main/img/marco.png");
+        Image marco=new Image("file:src/main/resources/img/marco.png");
         
         for (int fila = 0; fila < tamañoMapa; fila++) {
             for (int columna = 0; columna < tamañoMapa; columna++) {

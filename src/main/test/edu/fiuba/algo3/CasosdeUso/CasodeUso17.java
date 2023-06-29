@@ -25,8 +25,8 @@ public class CasodeUso17 {
     @Test
     public void Prueba01(){
        
-        String path="src/main/java/edu/fiuba/algo3/models/ArchivosJson/mapaReducido.json";
-        String path2="src/main/java/edu/fiuba/algo3/models/ArchivosJson/enemigosReducido.json";
+        String path="src/main/resources/ArchivosJson/mapaReducido.json";
+        String path2="src/main/resources/ArchivosJson/enemigosReducido.json";
         Parser parser = new Parser();
         Mapa mapa=new Mapa(path2,path,parser);
         List<List<Enemigo>> enemigosEsperados = new ArrayList<>();

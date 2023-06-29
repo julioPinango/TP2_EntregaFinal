@@ -47,7 +47,7 @@ public class VistaJugador extends GridPane{
         this.setVgap(0);
         this.setStyle("-fx-border-color: black;");
 
-        Image imagen = new Image("file:src/main/img/fondoDefensa.png");
+        Image imagen = new Image("file:src/main/resources/img/fondoDefensa.png");
         BackgroundImage imagenFondo = new BackgroundImage(imagen, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, true));
         this.setBackground(new Background(imagenFondo));
 
@@ -125,13 +125,13 @@ public class VistaJugador extends GridPane{
         TorrePlateadaBox.setSpacing(0);
         TorrePlateadaBox.setAlignment(Pos.CENTER);
 
-        Image imgArenoso = new Image("file:src/main/img/arenoso.png");
-        Image imgTorreBlanca = new Image("file:src/main/img/TorreBlanca.png");
-        Image imgTorrePlateada = new Image("file:src/main/img/TorrePlateada.png");
+        Image imgArenoso = new Image("file:src/main/resources/img/arenoso.png");
+        Image imgTorreBlanca = new Image("file:src/main/resources/img/TorreBlanca.png");
+        Image imgTorrePlateada = new Image("file:src/main/resources/img/TorrePlateada.png");
 
-        Image imgArenosoDeshabilitado = new Image("file:src/main/img/arenosoDeshabilitada.png");
-        Image imgTorreBlancaDeshabilitada = new Image("file:src/main/img/TorreBlancaDeshabilitada.png");
-        Image imgTorrePlateadaDeshabilitada= new Image("file:src/main/img/TorrePlateadaDeshabilitada.png");
+        Image imgArenosoDeshabilitado = new Image("file:src/main/resources/img/arenosoDeshabilitada.png");
+        Image imgTorreBlancaDeshabilitada = new Image("file:src/main/resources/img/TorreBlancaDeshabilitada.png");
+        Image imgTorrePlateadaDeshabilitada= new Image("file:src/main/resources/img/TorrePlateadaDeshabilitada.png");
 
         ImageView imageViewArena = new ImageView(imgArenoso);
         ImageView imageViewBlanca = new ImageView(imgTorreBlanca);
