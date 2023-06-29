@@ -11,9 +11,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.fiuba.algo3.models.Cordenada;
+import edu.fiuba.algo3.models.Defensas.Defensa;
 import edu.fiuba.algo3.models.Defensas.TrampaArenosa;
 import edu.fiuba.algo3.models.Defensas.Estados.Estado;
+import edu.fiuba.algo3.models.Defensas.Estados.EstadoOperativo;
 import edu.fiuba.algo3.models.Enemigos.Enemigo;
+import edu.fiuba.algo3.models.Parcelas.Pasarela;
+import edu.fiuba.algo3.models.Parcelas.Tierra;
 
 public class PruebaTrampaArenosa {
     @Test
@@ -77,4 +81,17 @@ public class PruebaTrampaArenosa {
         assertFalse(trampa.destruido());
     }
     
+    @Test
+    public void TestSepuedeConstruirUnaTrampaEncimadeOtra()
+    {
+        Cordenada cordenada = mock(Cordenada.class);
+        Estado estado = mock(EstadoOperativo.class);
+        Defensa defensaNueva = new TrampaArenosa(cordenada, estado);
+        Defensa defensaNueva2 = new TrampaArenosa(cordenada, estado);
+
+        Pasarela camino = new Pasarela(cordenada);
+        camino.puedoConstruirDefensa(defensaNueva);
+        assertTrue(camino.puedoConstruirDefensa(defensaNueva2)); 
+    }
+
 }

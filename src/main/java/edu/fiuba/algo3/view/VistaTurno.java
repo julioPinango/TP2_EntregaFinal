@@ -1,6 +1,7 @@
 package edu.fiuba.algo3.view;
 
 import edu.fiuba.algo3.models.Juego;
+import edu.fiuba.algo3.view.eventos.TextoEventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
@@ -41,7 +42,7 @@ public class VistaTurno extends GridPane{
         stackPaneCuadro.setTranslateX(0); 
         stackPaneCuadro.setTranslateY(0); 
 
-        this.add(stackPaneCuadro, 0, 0);
+        this.add(stackPaneCuadro, 0, 0);      
 
         return this;
     }
