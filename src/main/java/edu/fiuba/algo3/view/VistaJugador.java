@@ -3,6 +3,8 @@ package edu.fiuba.algo3.view;
 import edu.fiuba.algo3.models.Juego;
 import edu.fiuba.algo3.view.eventos.BotonPasarTurnoHandler;
 import edu.fiuba.algo3.view.eventos.SeleccionDefensaEventHandle;
+import edu.fiuba.algo3.view.eventos.SpaceEventHandler;
+import edu.fiuba.algo3.view.eventos.TextoEventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -97,6 +99,9 @@ public class VistaJugador extends GridPane{
 
         BotonPasarTurnoHandler pasarTurno = new BotonPasarTurnoHandler(juego,vistaMapa,this,_VistaTurno, this.stage, this.mediaPlayer);
         botonPasarTurno.setOnAction(pasarTurno);
+
+        SpaceEventHandler space = new SpaceEventHandler(pasarTurno);
+        botonPasarTurno.setOnKeyPressed(space);
 
         return botonPasarTurno;
     }

@@ -1,7 +1,9 @@
 package edu.fiuba.algo3.view;
 
 import edu.fiuba.algo3.models.Juego;
+import edu.fiuba.algo3.view.eventos.BotonPasarTurnoHandler;
 import edu.fiuba.algo3.view.eventos.ControladorSonido;
+import edu.fiuba.algo3.view.eventos.SpaceEventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.image.Image;
 import javafx.scene.layout.Background;
