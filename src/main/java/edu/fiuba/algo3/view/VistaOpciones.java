@@ -31,7 +31,6 @@ public class VistaOpciones extends MenuBar{
 
         Menu subMenuButton = new Menu("Opciones");
         MenuItem silenciarMusicaItem = new MenuItem("Silenciar/Activar música");
-        //MenuItem silenciarEfectosItem = new MenuItem("Silenciar efectos");
         MenuItem pantallaCompletaItem = new MenuItem("Activar/Desactivar Pantalla completa");
         MenuItem SalirItem = new MenuItem("Salir del Juego");
         MenuItem reiniciarJuego = new MenuItem("Reiniciar Juego");
